@@ -1,0 +1,9 @@
+---
+- name: write memory
+  a10.acos_axapi.a10_write_memory:
+    ansible_host: "{{ ansible_host }}"
+    ansible_port: "{{ ansible_port }}"
+    ansible_username: "{{ ansible_username }}"
+    ansible_password: "{{ ansible_password }}"
+    partition: "shared"
+    destination: "primary"

@@ -1,0 +1,6 @@
+---
+# tasks file for write_memory
+- name: write memory
+  ansible.builtin.include_tasks:
+    file: write_memory.yml
+

@@ -1,0 +1,13 @@
+---
+- hosts: vthunder
+  gather_facts: false
+  tasks:
+  - import_role:
+      name: create_health_monitor
+  - import_role:
+      name: create_servers_service_group
+  - import_role:
+      name: create_virtual_server
+  - import_role:
+      name: write_memory
+

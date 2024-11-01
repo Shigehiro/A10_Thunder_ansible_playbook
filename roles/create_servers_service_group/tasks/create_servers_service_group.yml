@@ -1,0 +1,19 @@
+---
+- name: configure servers and service group
+  a10.acos_axapi.a10_slb_service_group:
+    ansible_host: "{{ ansible_host }}"
+    ansible_port: "{{ ansible_port }}"
+    ansible_username: "{{ ansible_username }}"
+    ansible_password: "{{ ansible_password }}"
+    protocol: tcp
+    health_check: test_health_monitor
+    member_list:
+      - host: 192.168.200.40
+        name: server-1-tcp80
+        port: 80
+      - host: 192.168.200.41
+        name: server-2-tcp80
+        port: 80
+    lb_method: dst-ip-hash
+    name: ansible-servicegroup
+  

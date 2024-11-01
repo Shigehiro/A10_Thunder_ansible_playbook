@@ -1,0 +1,5 @@
+---
+# tasks file for create_health_monitor
+- name: create health monitor
+  ansible.builtin.include_tasks:
+    file: create_health_monitor.yml

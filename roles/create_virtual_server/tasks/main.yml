@@ -1,0 +1,6 @@
+---
+# tasks file for create_virtual_server
+- name: create virtual server
+  ansible.builtin.include_tasks:
+    file: create_virtual_server.yml
+

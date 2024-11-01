@@ -1,0 +1,5 @@
+---
+# tasks file for create_servers_service_group
+- name: create servers and service group
+  ansible.builtin.include_tasks:
+    file: create_servers_service_group.yml

@@ -1,0 +1,4 @@
+ansible_username: admin
+ansible_password: Admin1
+ansible_port: 443
+

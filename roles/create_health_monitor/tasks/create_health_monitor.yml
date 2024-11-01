@@ -1,0 +1,21 @@
+---
+- name: create health monitor
+  a10.acos_axapi.a10_health_monitor:
+    ansible_host: "{{ ansible_host }}"
+    ansible_port: "{{ ansible_port }}"
+    ansible_username: "{{ ansible_username }}"
+    ansible_password: "{{ ansible_password }}"
+    state: present
+    up_retry: "{{ up_retry }}"
+    retry: "{{ retry }}"
+    timeout: "{{ timeout }}"
+    interval: "{{ interval }}"
+    method:
+      tcp:
+        port_send: 'ping'
+        method_tcp: 1
+        port_resp:
+          port_contains: 'ping'
+        tcp_port: 80
+    name: test_health_monitor
+

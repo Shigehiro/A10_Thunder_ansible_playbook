@@ -1,0 +1,6 @@
+---
+# defaults file for create_health_monitor
+up_retry: 1
+retry: 1
+timeout: 5
+interval: 5
